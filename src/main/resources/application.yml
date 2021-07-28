@@ -1,0 +1,24 @@
+# 服务端口
+server:
+  port: 8080
+# 配置rabbitmq服务
+spring:
+  rabbitmq:
+    username: admin
+    password: admin
+    virtual-host: /
+#    集群采用address
+    addresses: haoxiangma.top:5672
+#    生产者使用消息确认机制
+    publisher-confirm-type: correlated
+
+#    消费者开启手动ack，让程序去控制MQ的消息重发、删除和转移
+    listener:
+      direct:
+        acknowledge-mode: manual
+        retry:
+          enabled: true #开启重试
+          max-attempts: 3 #最大重试次数
+          initial-interval: 2000ms #重试时间间隔
+#    host: haoxiangma.top
+#    port: 5672
