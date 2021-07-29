@@ -11,5 +11,6 @@ public class Test {
         System.out.println("hot-fix version:6");
         System.out.println("master version:5");
         System.out.println("push test version:7");
+        System.out.println("push ssh git version:8");
     }
 }
