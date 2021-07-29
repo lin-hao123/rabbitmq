@@ -13,5 +13,6 @@ public class Test {
         System.out.println("push test version:7");
         System.out.println("push ssh git version:8");
         System.out.println("git-ssh");
+        System.out.println("gitee-ssh");
     }
 }
